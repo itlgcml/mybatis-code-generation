@@ -1,0 +1,25 @@
+package ${modelPackage};
+
+import com.xbongbong.paas.toolbox.wrap.IModel;
+import ${entityPackage};
+
+import java.util.List;
+import java.util.Map;
+
+
+/**
+ * @author bomfish
+ */
+public interface ${modelClass} extends IModel<${entityClass}> {
+   Integer insert(${entityClass} entity);
+
+   void insertBatch(List<${entityClass}> list);
+
+   List<${entityClass}> findEntitys(Map<String, Object> param);
+
+   Integer getEntitysCount(Map<String, Object> param);
+
+   Integer update(${entityClass} entity);
+
+   ${entityClass} getByKey(Long key, String corpid);
+}

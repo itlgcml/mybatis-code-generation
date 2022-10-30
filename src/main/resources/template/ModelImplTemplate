@@ -1,0 +1,50 @@
+package ${modelImplPackage};
+
+import ${daoPackage};
+import ${entityPackage};
+import ${importModelPackage};
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author bomfish
+ */
+@Service("${modelName}")
+public class ${modelImplName} implements ${modelClass} {
+    @Resource
+    private ${daoClass} ${daoName};
+
+    @Override
+    public Integer insert(${entityClass} entity) {
+        return ${daoName}.insert(entity);
+    }
+
+    @Override
+    public void insertBatch(List<${entityClass}> list) {
+        ${daoName}.insertBatch(list);
+    }
+
+    @Override
+    public List<${entityClass}> findEntitys(Map<String, Object> param) {
+        return ${daoName}.findEntitys(param);
+    }
+
+    @Override
+    public Integer getEntitysCount(Map<String, Object> param) {
+        return ${daoName}.getEntitysCount(param);
+    }
+
+    @Override
+    public Integer update(${entityClass} entity) {
+        return ${daoName}.update(entity);
+    }
+
+    @Override
+    public ${entityClass} getByKey(Long key, String corpid) {
+        return ${daoName}.getByKey(key, corpid);
+    }
+
+}
