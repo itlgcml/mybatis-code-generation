@@ -22,10 +22,6 @@
 #### version 1.1
 1. 支持model层的生成了，当前仅支持tb_开头的表名
 2. 数据库jar包支持调用项目内文件了，不需要手动更改xml配置
+可以根据自己公司的需求去对应修改。
 
-#### 鸣谢
-
-https://gitee.com/xxxcxy/support-generator
-
-可以去点个赞
 
